@@ -1011,6 +1011,8 @@
 
       function buildDatosEnqueueTotem(dni, detalle) {
         return {
+          firstName: 'Paciente',
+          lastName: 'Clínica Mar Caribe',
           dni: dni,
           email: 'mail@mail.com',
           extraFields: buildExtraFieldsTotem(detalle)
@@ -1995,10 +1997,17 @@
       function mostrarConclusionesFinalesAgente(resumenOpcional) {
         if (!summaryContent || !summarySection) return;
         var html = '';
-        if (resumenOpcional != null && resumenOpcional !== '') {
-          var t = typeof resumenOpcional === 'string' ? resumenOpcional : (resumenOpcional.message || JSON.stringify(resumenOpcional, null, 2));
-          html += '<div class="summary-resumen-api">' + escapeHtml(t) + '</div>';
-        }
+        /* Resumen del paciente: datos genéricos de salud (hardcodeados) */
+        html += '<div class="summary-resumen-api">';
+        html += '<strong>Resumen del paciente</strong>\n';
+        html += 'Expediente: 12342\n';
+        html += 'Última visita: 12 de abril del 2026\n';
+        html += 'Motivo de última visita: Consulta general\n';
+        html += 'Diagnóstico previo: Hipertensión arterial leve\n';
+        html += 'Medicación actual: Losartán 50 mg (una vez al día)\n';
+        html += 'Alergias registradas: Ninguna\n';
+        html += 'Próxima cita programada: 14 de julio del 2026';
+        html += '</div>';
         html += '<div class="agent-conclusions">';
         html += '<div class="agent-conclusions-title">Conclusiones del agente</div>';
         var textoConc = CONCLUSIONES_AGENTE_TEXTO;
