@@ -1002,7 +1002,14 @@
       function buildExtraFieldsTotem(detalle) {
         return [{
           showable: [{ in: 'workstation', format: 'both' }],
-          Detalle: detalle || DETALLE_EXTRA_FIELDS_TOTEM
+          Detalle: detalle || DETALLE_EXTRA_FIELDS_TOTEM,
+          'Expediente': '12342',
+          'Última visita': '12 de abril del 2026',
+          'Motivo de última visita': 'Consulta general',
+          'Diagnóstico previo': 'Hipertensión arterial leve',
+          'Medicación actual': 'Losartán 50 mg (una vez al día)',
+          'Alergias registradas': 'Ninguna',
+          'Próxima cita': '14 de julio del 2026'
         }];
       }
 
