@@ -1606,7 +1606,7 @@
           stepsContainer.innerHTML = '<div style="color: #ffffff;"><i class="bi bi-hourglass-split me-2"></i>Conectando con el asistente...</div>';
           
           // Llamar al agente con el DNI ingresado y la opción seleccionada
-          const mensaje = `Necesito atención sobre ${opcion}. DNI: ${dniIngresado}`;
+          const mensaje = `Paciente de Clínica Mar Caribe solicita atención médica: ${opcion}. DNI: ${dniIngresado}. Contexto: clínica de salud, no financiero.`;
           
           const response = await fetch(JOURNEY_API_URL, {
             method: 'POST',
